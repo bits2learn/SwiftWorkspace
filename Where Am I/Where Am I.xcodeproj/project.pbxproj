@@ -13,6 +13,7 @@
 		A1FF278C1B30D07B002C95E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1FF278B1B30D07B002C95E0 /* Images.xcassets */; };
 		A1FF278F1B30D07B002C95E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FF278D1B30D07B002C95E0 /* LaunchScreen.xib */; };
 		A1FF279B1B30D07B002C95E0 /* Where_Am_ITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF279A1B30D07B002C95E0 /* Where_Am_ITests.swift */; };
+		A1FF27A51B310454002C95E0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FF27A41B310454002C95E0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A1FF27941B30D07B002C95E0 /* Where Am ITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Where Am ITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FF27991B30D07B002C95E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1FF279A1B30D07B002C95E0 /* Where_Am_ITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Where_Am_ITests.swift; sourceTree = "<group>"; };
+		A1FF27A41B310454002C95E0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FF27A51B310454002C95E0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		A1FF27761B30D07B002C95E0 = {
 			isa = PBXGroup;
 			children = (
+				A1FF27A41B310454002C95E0 /* CoreLocation.framework */,
 				A1FF27811B30D07B002C95E0 /* Where Am I */,
 				A1FF27971B30D07B002C95E0 /* Where Am ITests */,
 				A1FF27801B30D07B002C95E0 /* Products */,

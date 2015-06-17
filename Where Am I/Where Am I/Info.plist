@@ -24,6 +24,12 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App needs to know your location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App needs to always know your location</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

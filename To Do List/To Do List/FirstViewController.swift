@@ -22,7 +22,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         //onloading we will check if any data is already present previously. If so we retrieve that data
         if NSUserDefaults.standardUserDefaults().objectForKey("toDoList") != nil {
        
-        toDoList = NSUserDefaults.standardUserDefaults().objectForKey("toDoList") as [String]
+        toDoList = NSUserDefaults.standardUserDefaults().objectForKey("toDoList") as! [String]
         }
     }
 

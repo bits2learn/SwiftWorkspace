@@ -37,10 +37,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     //check if we have touched outside of a text box, so that we can hide the keyboard
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
-        
     }
 
     //hide the keyboard when we click on the return key

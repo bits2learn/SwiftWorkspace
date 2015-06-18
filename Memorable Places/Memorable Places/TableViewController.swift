@@ -17,6 +17,11 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if NSUserDefaults.standardUserDefaults().objectForKey("places") != nil {
+            
+            places = NSUserDefaults.standardUserDefaults().objectForKey("places") as! [Dictionary<String,String>]
+        }
+        
         //have some data in the table
         //places dictionary is not empty when created, so remove the first entry
         
@@ -88,18 +93,29 @@ class TableViewController: UITableViewController {
         return true
     }
     */
+    
 
-    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+        /*if editingStyle == .Delete {
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+        */
+        //check if we have clicked delete button after swiping to left
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            places.removeAtIndex(indexPath.row)
+            
+            //storing the data permanently
+            NSUserDefaults.standardUserDefaults().setObject(places, forKey: "places")
+            
+            tableView.reloadData()
+        }
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.

@@ -77,6 +77,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
                 
                 var title = ""
+                var alreadyExistingPlace:Bool = false
                 
                 if (error == nil) {
                     
@@ -106,7 +107,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                     title = "Added \(NSDate())"
                 }
                 
-                places.append(["name":title, "lat":"\(newCoordinate.latitude)", "lon":"\(newCoordinate.longitude)"])
+                for var index=0; index<places.count; index++ {
+                    
+                    if places[index]["name"]! == title {
+                        alreadyExistingPlace = true
+                    }
+                }
+                
+                if alreadyExistingPlace == false {
+                
+                    places.append(["name":title, "lat":"\(newCoordinate.latitude)", "lon":"\(newCoordinate.longitude)"])
+                
+                    //updating the permanent storgae data
+                    NSUserDefaults.standardUserDefaults().setObject(places, forKey: "places")
+                    
+                }
                 
                 var annotation = MKPointAnnotation()
                 

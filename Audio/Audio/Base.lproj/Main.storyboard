@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,40 +18,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55J-YO-F8V">
-                                <rect key="frame" x="164" y="128" width="43" height="30"/>
-                                <state key="normal" title="Pause">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jvc-4c-0pV">
+                                <rect key="frame" x="128" y="556" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="7Ju-ss-dwR"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="114" id="KHc-2H-d8N"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="114" id="NRw-he-FBr"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="Oo7-So-yJF"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="PkT-bN-07o"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="kjV-ZA-tf6"/>
+                                    <constraint firstAttribute="width" constant="114" id="mCm-ev-ShU"/>
+                                    <constraint firstAttribute="height" constant="30" id="tWZ-O8-dQ0"/>
+                                    <constraint firstAttribute="width" secondItem="Jvc-4c-0pV" secondAttribute="height" multiplier="19:5" id="zai-eb-Rbt"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="pause:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VN1-Hn-CCP"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jvc-4c-0pV">
-                                <rect key="frame" x="128" y="198" width="118" height="31"/>
-                                <connections>
-                                    <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="5yb-lz-Ef9"/>
+                                    <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="FLp-F3-LKU"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAI-jJ-jsB">
-                                <rect key="frame" x="170" y="72" width="30" height="30"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="play:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fWA-lO-la5"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xey-mT-cG4">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="UFa-IB-bYG">
+                                        <connections>
+                                            <action selector="play:" destination="vXZ-lx-hvc" id="fuB-FU-sqd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qek-Gz-O1x"/>
+                                    <barButtonItem systemItem="stop" id="UL2-GL-DyV">
+                                        <connections>
+                                            <action selector="stop:" destination="vXZ-lx-hvc" id="z84-Hy-28j"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rocky3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="flX-BX-Fla">
+                                <rect key="frame" x="0.0" y="20" width="375" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="flX-BX-Fla" secondAttribute="height" multiplier="375:382" id="5us-2y-Fg1"/>
+                                    <constraint firstAttribute="width" secondItem="flX-BX-Fla" secondAttribute="height" multiplier="375:382" id="7cB-oZ-fla"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="flX-BX-Fla" secondAttribute="trailing" constant="-16" id="Jnv-0x-bcJ"/>
+                            <constraint firstItem="flX-BX-Fla" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="VCI-YM-rFY"/>
+                            <constraint firstItem="Xey-mT-cG4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="VQr-Po-ae5"/>
+                            <constraint firstItem="Xey-mT-cG4" firstAttribute="top" secondItem="Jvc-4c-0pV" secondAttribute="bottom" constant="37" id="aho-XH-JbE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Xey-mT-cG4" secondAttribute="bottom" id="gJK-gF-jsh"/>
+                            <constraint firstItem="flX-BX-Fla" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="wAx-sN-F8G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xey-mT-cG4" secondAttribute="trailing" constant="-16" id="weM-cm-ogN"/>
+                            <constraint firstItem="Jvc-4c-0pV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="114" id="zdD-uM-ukp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jvc-4c-0pV" secondAttribute="trailing" constant="115" id="zmG-ev-o3e"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="sliderValue" destination="Jvc-4c-0pV" id="8I3-iu-hbk"/>
+                        <outlet property="sliderValue" destination="Jvc-4c-0pV" id="yFK-iy-42v"/>
+                        <outlet property="toolbar" destination="Xey-mT-cG4" id="DaE-Xg-yMb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rocky3.jpg" width="1020" height="1030"/>
+    </resources>
 </document>

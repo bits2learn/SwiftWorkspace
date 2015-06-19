@@ -14,7 +14,7 @@
 		A1A2251D1B3386C300ADA9AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A2251B1B3386C300ADA9AB /* LaunchScreen.xib */; };
 		A1A225291B3386C300ADA9AB /* AudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A225281B3386C300ADA9AB /* AudioTests.swift */; };
 		A1A225331B33875300ADA9AB /* EyeOfTheTiger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1A225321B33875300ADA9AB /* EyeOfTheTiger.mp3 */; };
-		A1A225351B338C9E00ADA9AB /* Sooraj.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1A225341B338C9E00ADA9AB /* Sooraj.mp3 */; };
+		A1A225691B33AF1200ADA9AB /* Rocky3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1A225681B33AF1200ADA9AB /* Rocky3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		A1A225271B3386C300ADA9AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1A225281B3386C300ADA9AB /* AudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTests.swift; sourceTree = "<group>"; };
 		A1A225321B33875300ADA9AB /* EyeOfTheTiger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = EyeOfTheTiger.mp3; path = ../EyeOfTheTiger.mp3; sourceTree = "<group>"; };
-		A1A225341B338C9E00ADA9AB /* Sooraj.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sooraj.mp3; sourceTree = "<group>"; };
+		A1A225681B33AF1200ADA9AB /* Rocky3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rocky3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				A1A225121B3386C300ADA9AB /* AppDelegate.swift */,
-				A1A225341B338C9E00ADA9AB /* Sooraj.mp3 */,
 				A1A225141B3386C300ADA9AB /* ViewController.swift */,
 				A1A225161B3386C300ADA9AB /* Main.storyboard */,
+				A1A225681B33AF1200ADA9AB /* Rocky3.jpg */,
 				A1A225321B33875300ADA9AB /* EyeOfTheTiger.mp3 */,
 				A1A225191B3386C300ADA9AB /* Images.xcassets */,
 				A1A2251B1B3386C300ADA9AB /* LaunchScreen.xib */,
@@ -198,9 +198,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A225691B33AF1200ADA9AB /* Rocky3.jpg in Resources */,
 				A1A225181B3386C300ADA9AB /* Main.storyboard in Resources */,
 				A1A2251D1B3386C300ADA9AB /* LaunchScreen.xib in Resources */,
-				A1A225351B338C9E00ADA9AB /* Sooraj.mp3 in Resources */,
 				A1A2251A1B3386C300ADA9AB /* Images.xcassets in Resources */,
 				A1A225331B33875300ADA9AB /* EyeOfTheTiger.mp3 in Resources */,
 			);
@@ -417,6 +417,7 @@
 				A1A2252E1B3386C300ADA9AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1A2252F1B3386C300ADA9AB /* Build configuration list for PBXNativeTarget "AudioTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +426,7 @@
 				A1A225311B3386C300ADA9AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
